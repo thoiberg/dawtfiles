@@ -95,7 +95,7 @@ source $ZSH/oh-my-zsh.sh
 
 # export PS1="[%* - %D] %d %% "
 
-export PATH=$PATH:/Users/timothyhoiberg/Library/Python/2.7/bin:/usr/local/Cellar/elasticsearch@2.4/2.4.5/bin:/Users/timothyhoiberg/go/bin:/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin
+export PATH=$PATH:/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin
 
 source ~/.aliases
 # source ~/Documents/scripts/set_npm_token.sh
