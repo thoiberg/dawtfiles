@@ -104,11 +104,6 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-. $HOME/.asdf/asdf.sh
-
-. $HOME/.asdf/completions/asdf.bash
-# the asdf nodejs shim does not work for me
-export PATH="$PATH:/usr/local/bin/yarn"
 
 if [ $(ssh-add -L | grep -c 'no identities') -eq 1 ] ;then
   ssh-add -t 18000 -K ~/.ssh/id_rsa
@@ -116,5 +111,9 @@ else
   ssh-add -D
   ssh-add -t 18000 -K ~/.ssh/id_rsa
 fi
+
+# asdf setup
+export ASDF_DIR=$(brew --prefix asdf)
+. $(brew --prefix asdf)/asdf.sh
 
 eval "$(direnv hook zsh)"
