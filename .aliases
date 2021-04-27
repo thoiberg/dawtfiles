@@ -19,3 +19,6 @@ alias berc="bundle exec rails c"
 alias dbs="bundle exec rake db:seed"
 alias dbm="bundle exec rake db:migrate"
 alias befs="bundle exec forego start"
+
+## Assorted
+alias dsa="docker stop $(docker ps -q)"
