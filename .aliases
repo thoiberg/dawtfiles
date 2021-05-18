@@ -18,6 +18,7 @@ alias ber="bundle exec rake"
 alias berc="bundle exec rails c"
 alias dbs="bundle exec rake db:seed"
 alias dbm="bundle exec rake db:migrate"
+alias dbr="bundle exec rake db:rollback"
 alias befs="bundle exec forego start"
 
 ## Assorted
