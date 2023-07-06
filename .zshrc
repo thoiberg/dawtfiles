@@ -60,6 +60,7 @@ ZSH_THEME="wild-cherry"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
+  # zshmarks # Need to install https://github.com/jocelynmallon/zshmarks first
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -106,14 +107,15 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 
 if [ $(ssh-add -L | grep -c 'no identities') -eq 1 ] ;then
-  ssh-add -t 18000 -K ~/.ssh/id_rsa
+  ssh-add -t 18000 --apple-use-keychain ~/.ssh/id_ed25519
 else
   ssh-add -D
-  ssh-add -t 18000 -K ~/.ssh/id_rsa
+  ssh-add -t 18000 --apple-use-keychain ~/.ssh/id_ed25519
 fi
 
 # asdf setup
 export ASDF_DIR=$(brew --prefix asdf)
-. $(brew --prefix asdf)/asdf.sh
+. $(brew --prefix asdf)/libexec/asdf.sh
 
 eval "$(direnv hook zsh)"
+export GPG_TTY=$(tty)

@@ -1,7 +1,7 @@
 ## Git
 alias gs="git status"
 alias gco="git checkout"
-alias gcom="git checkout master"
+alias gcom="git checkout master || git checkout main"
 alias gd="git diff"
 alias gf="git fetch"
 alias gb="git branch"
@@ -16,6 +16,8 @@ alias gbclean='git branch --merged | xargs git branch -d'
 alias be="bundle exec"
 alias ber="bundle exec rake"
 alias berc="bundle exec rails c"
+alias berc="bundle exec rails s"
+alias wds="./bin/webpack-dev-server"
 alias dbs="bundle exec rake db:seed"
 alias dbm="bundle exec rake db:migrate"
 alias dbr="bundle exec rake db:rollback"
@@ -23,3 +25,7 @@ alias befs="bundle exec forego start"
 
 ## Assorted
 alias dsa="docker stop $(docker ps -q)"
+
+## Zshmarks
+alias g="jump"
+alias s="bookmark"
